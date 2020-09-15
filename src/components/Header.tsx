@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 const Container = tw.header`max-w-full w-full h-16 bg-gray-900 flex items-center px-4`
 const Brand = tw.a`text-2xl text-gray-100 font-bold uppercase font-sans tracking-widest`
 const Nav = tw.nav`mr-auto ml-6`
-const Button = tw.a`appearance-none uppercase text-sm px-8 py-3 text-gray-100 focus:outline-none  rounded-md font-medium tracking-widest flex items-center bg-gradient-to-r from-indigo-500 to-purple-500`
+const Button = tw.a`appearance-none uppercase text-sm px-8 py-2 text-gray-100 focus:outline-none  rounded-md font-medium tracking-widest flex items-center bg-gradient-to-r from-indigo-500 to-purple-500`
 const NavLink = tw(Brand)`text-sm hover:text-indigo-500 pr-4`
 
 export const SteamIcon = () => (
@@ -28,26 +28,20 @@ export const Header: React.FC = () => {
         <NavLink href="/" tw="text-indigo-500">
           market
         </NavLink>
-        <NavLink
-          target="_self"
-          href={`/openid/login?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=checkid_setup&openid.return_to=https%3A%2F%2F${window.location.origin}%2F%3Flogin&openid.realm=https%3A%2F%2F${window.location.origin}&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select`}
-        >
+        <NavLink className="goAuth" href="/">
           inventory check
         </NavLink>
-        <NavLink
-          target="_self"
-          href={`/openid/login?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=checkid_setup&openid.return_to=https%3A%2F%2F${window.location.origin}%2F%3Flogin&openid.realm=https%3A%2F%2F${window.location.origin}&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select`}
-        >
+        <NavLink href="/" className="goAuth">
           inspect skins
         </NavLink>
       </Nav>
       <Button
-        href={`/openid/login?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=checkid_setup&openid.return_to=https%3A%2F%2F${window.location.origin}%2F%3Flogin&openid.realm=https%3A%2F%2F${window.location.origin}&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select`}
-        target="_self"
+        href="/"
+        className="goAuth"
         tw="bg-gradient-to-r from-indigo-500 to-purple-500"
       >
         <SteamIcon />
-        signin with steam
+        sign in with steam
       </Button>
     </Container>
   )

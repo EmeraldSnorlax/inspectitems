@@ -75,10 +75,7 @@ export const Item: React.FC<ItemProps> = (props) => (
     <Inspect target="_blank" href={props.inspect}>
       Inspect item
     </Inspect>
-    <Button
-      target="_self"
-      href={`/openid/login?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=checkid_setup&openid.return_to=https%3A%2F%2F${window.location.origin}%2F%3Flogin&openid.realm=https%3A%2F%2F${window.location.origin}&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select`}
-    >
+    <Button className="goAuth" href="/">
       add to cart
     </Button>
   </Wrapper>
