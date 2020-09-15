@@ -1,7 +1,11 @@
 module.exports = {
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["'Montserrat'"],
+      },
+    },
   },
   variants: {},
   plugins: [],
