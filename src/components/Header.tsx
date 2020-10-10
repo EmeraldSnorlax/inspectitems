@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
   return (
     <Container>
       <Brand href="/">
-        <span tw="text-indigo-500">inspect</span>game
+        <span tw="text-indigo-500">inspect</span>items
       </Brand>
       <Nav>
         <NavLink href="/" tw="text-indigo-500">
